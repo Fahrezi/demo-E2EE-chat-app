@@ -1,6 +1,8 @@
 export type Data = {
   encryptedMessage: string;
-  from: 'kripto' | 'grafi' | '';
-  to: 'kripto' | 'grafi' | '';
+  from: Party | string;
+  to: Party | string;
   nonce: string;
 };
+
+export type Party = 'kripto' | 'grafi'

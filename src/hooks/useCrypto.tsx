@@ -70,10 +70,6 @@ const useCrypto = () => {
     await sodium.ready;
 
     const nonce = sodium.randombytes_buf(sodium.crypto_box_NONCEBYTES)
-    
-    console.log(publicKey, publicKey[to]);
-    console.log(secretKey, secretKey[from]);
-    console.log('nonce', sodium.to_base64(nonce));
 
     const encryptedMessage = sodium.to_base64(await sodium.crypto_box_easy(
       message,  

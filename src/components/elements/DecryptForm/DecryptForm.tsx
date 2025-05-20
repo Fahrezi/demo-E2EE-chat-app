@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Button from '../Button';
 import styles from './DecryptForm.module.scss';
-import type { Data } from './DecryptForm.test';
+import type { Data, Party } from './DecryptForm.test';
 import Select from '../Select';
 import Input from '../Input';
 import useCrypto from '../../../hooks/useCrypto';
@@ -31,10 +31,9 @@ const DecryptForm = () => {
   };
 
   const handleSubmit = async () => {
-    console.log(data);
     const decryptedMessage = await decryptMessage(
-      data.from,
-      data.to,
+      data.from as Party,
+      data.to as never,
       data.encryptedMessage,
       data.nonce
     );

@@ -40,7 +40,7 @@ function App() {
     
     const to = from === 'kripto' ? 'grafi' : 'kripto';
     const isSelf = from === 'grafi';
-    const { encryptedMessage, nonce } = await encryptMessage(from, to, message[from]);
+    const { encryptedMessage, nonce } = await encryptMessage(from, to as never, message[from]);
 
     const data: Data = {
       isSelf,
