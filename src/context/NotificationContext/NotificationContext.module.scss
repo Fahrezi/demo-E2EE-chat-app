@@ -1,0 +1,26 @@
+.notification-context {
+  position: relative;
+  
+  & > header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    background-color: #9CFF97;
+    transition: transform 0.2s ease-in-out;
+    
+    &[aria-label="hidden"] {
+      transform: translateY(-48px);
+    }
+    
+    &[aria-label="visible"] {
+      transform: translateY(0px);
+    }
+
+    & > h3 {
+      text-align: center;
+      margin: 12px 0;
+    }
+  }
+}

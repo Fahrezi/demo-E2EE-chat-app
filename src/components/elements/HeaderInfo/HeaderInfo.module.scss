@@ -1,0 +1,13 @@
+.header-info {
+  margin: 16px 0 24px 0;
+
+  & > h2 {
+    font-size: 40px;
+    display: inline-block;
+    margin: 0;
+  }
+  
+  & > svg {
+    cursor: pointer;
+  }
+}

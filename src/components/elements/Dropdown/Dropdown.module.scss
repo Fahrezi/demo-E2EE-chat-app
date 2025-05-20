@@ -1,0 +1,74 @@
+.dropdown {
+  border-radius: 16px;
+  padding: 16px;
+  background-color: #EFEFEF;
+  height: fit-content;
+
+  & > header {
+    display: grid;
+    grid-template-columns: 1fr 10%;
+    align-items: center;
+
+    & > h5 {
+      font-weight: 400;
+      text-overflow: ellipsis;
+      width: 100%;
+      margin: 0;
+      font-size: 16px;
+    }
+
+    & > svg {
+      cursor: pointer;
+    }
+  }
+
+  & > div {
+    margin-top: 12px;
+    height: fit-content;
+
+    & > span {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      justify-content: space-between;
+
+      & > p {
+        margin: 0;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        width: 100%;
+        margin-bottom: 0;
+      }
+
+      & > svg {
+        cursor: pointer;
+      }
+    }
+
+    & > p {
+      margin: 0;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 4px;
+      }
+    }
+  }
+}
+
+.rotate {
+  &-on {
+    transform: rotate(180deg);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  &-off {
+    transform: rotate(0deg);
+    transition: transform 0.2s ease-in-out;
+  }
+}
+

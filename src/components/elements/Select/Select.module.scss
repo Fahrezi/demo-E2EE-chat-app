@@ -1,0 +1,43 @@
+.select {
+  width: 100%;
+  position: relative;
+
+  & > button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border: solid 2px #191A23;
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 16px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: left;
+    font-family: inherit;
+  }
+
+  & > ul {
+    border: solid 2px #191A23;
+    background-color: #fff;
+    overflow: hidden;
+    padding: 0;
+    width: 100%;
+    border-radius: 16px;
+    position: absolute;
+    left: 0;
+    top: 40px;
+    z-index: 7;
+
+    & > li {
+      list-style-type: none;
+      cursor: pointer;
+      padding: 16px 24px;
+      font-size: 16px;
+
+      &:hover {
+        background-color: rgb(231, 231, 231)
+      }
+    }
+  }
+}
