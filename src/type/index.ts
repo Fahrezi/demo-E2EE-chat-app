@@ -4,5 +4,5 @@ export type Data = {
   publicKey: string;
   isSelf: boolean;
   userId: number;
-  encryptedMessage?: string
+  encryptedMessage: string
 }

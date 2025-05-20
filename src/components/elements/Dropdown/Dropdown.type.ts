@@ -1,7 +1,7 @@
 export type Props = {
   header: string;
   body: {
-    [key in bodykeys]: string | number;
+    [key in bodykeys]: string | number | boolean;
   };
 }
 
